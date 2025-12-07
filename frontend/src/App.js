@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const API = "https://your-backend-name.onrender.com";
+  const API = "https://chat-r4xt.onrender.com";
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
 
@@ -19,7 +19,7 @@ function App() {
 
     if (!input.trim()) return;
 
-    const res = await fetch("https://chatapp-8qep.onrender.com/chat", {
+    const res = await fetch("https://chat-r4xt.onrender.com/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: input })
@@ -38,7 +38,7 @@ function App() {
 
   // Clear chat
   async function clearChat() {
-    await fetch("https://chatapp-8qep.onrender.com/clear", { method: "POST" });
+    await fetch("https://chat-r4xt.onrender.com/clear", { method: "POST" });
     setMessages([]);
   }
 
